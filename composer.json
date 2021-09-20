@@ -1,0 +1,41 @@
+{
+  "name": "andrew-svirin/test-performance",
+  "description": "Yii 2 Basic Project Tests Performance",
+  "type": "project",
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.1.0",
+    "yiisoft/yii2": "~2.0.14"
+  },
+  "require-dev": {
+    "codeception/codeception": "^4.0",
+    "codeception/module-yii2": "^1.0.0",
+    "codeception/module-asserts": "^1.0.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "yii\\composer\\Installer::postInstall"
+    ]
+  },
+  "extra": {
+    "yii\\composer\\Installer::postCreateProject": {
+      "setPermission": [
+        {
+          "runtime": "0777",
+          "yii": "0755"
+        }
+      ]
+    },
+    "yii\\composer\\Installer::postInstall": {
+      "generateCookieValidationKey": [
+        "config/web.php"
+      ]
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}

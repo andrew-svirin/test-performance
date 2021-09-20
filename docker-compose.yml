@@ -1,0 +1,50 @@
+version: '3.2'
+
+services:
+  php-cli:
+    container_name: php-cli-test
+    build:
+      context: ./docker/php
+    volumes:
+      - ~/.ssh:/home/www-data/.ssh
+      - ./:/var/www/test-performance
+      - ./docker/php/entrypoint.sh:/home/www-data/entrypoint.sh
+      - ./docker/php/hosts:/etc/hosts
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini:ro
+    links:
+      - mysql
+    ports:
+      - "9009:9001"
+    tty: true
+    networks:
+      test-performance-net:
+        ipv4_address: 172.100.0.5
+    environment:
+      PHP_IDE_CONFIG: "serverName=test-performance"
+
+  mysql:
+    container_name: mysql-test
+    image: mysql:5.6
+    ports:
+      - "3336:3306"
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD="test"
+      - MYSQL_USER="test"
+      - MYSQL_PASSWORD="test"
+      - MYSQL_DATABASE="test_performance"
+    networks:
+      test-performance-net:
+        ipv4_address: 172.100.0.6
+    restart: unless-stopped
+
+networks:
+  test-performance-net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.100.0.0/24
+    driver_opts:
+      com.docker.network.bridge.name: br_tp
