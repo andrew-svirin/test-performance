@@ -4,11 +4,11 @@
 Optimize performance for tests by optimizing database node.
 
 # Installation
-1. Run `make docker-build`
-2. Login into php-container `make php`
-2.1 From php container: Install dependencies `composer install`
-2.2 From php container: Install migration `php tests/bin/yii migrate -y`
-2.3 From php container: Run tests `./vendor/bin/codeception run`
+1. Run `make docker-build`  
+2. Login into php-container `make php`  
+2.1 From php container: Install dependencies `composer install`  
+2.2 From php container: Install migration `php tests/bin/yii migrate -y`  
+2.3 From php container: Run tests `./vendor/bin/codeception run`  
 
 # Experiment
 1. Using 2 related tables (authors, books)
