@@ -9,7 +9,7 @@ $config = [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
     'aliases' => [
-        '@tests' => '@app/tests',
+        '@tests' =>  '@app/../tests',
     ],
     'components' => [
         'log' => [
@@ -23,21 +23,14 @@ $config = [
         'db' => $db,
     ],
     'params' => $params,
-    /*
     'controllerMap' => [
-        'fixture' => [ // Fixture generation command line.
+        'fixture' => [
             'class' => 'yii\faker\FixtureController',
+            'templatePath' => '@tests/templates/fixtures',
+            'fixtureDataPath' => '@tests/fixtures/data',
+            'namespace' => 'tests\fixtures',
         ],
     ],
-    */
 ];
-
-if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-    ];
-}
 
 return $config;

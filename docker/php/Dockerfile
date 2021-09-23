@@ -1,11 +1,18 @@
 FROM php:7.3-cli
 
-RUN apt-get update && apt-get install -y libmcrypt-dev libpq-dev libxml2-dev zlib1g-dev git unzip \
-    libpng-dev librabbitmq-dev libssh-dev libzip-dev sudo
+RUN apt-get update && apt-get install -y libmcrypt-dev \
+    libpq-dev \
+    libxml2-dev \
+    zlib1g-dev \
+    git \
+    unzip \
+    libssh-dev \
+    libzip-dev \
+    sudo
 
 RUN pecl install xdebug mcrypt-1.0.2 && \
     docker-php-ext-enable xdebug mcrypt && \
-    docker-php-ext-install intl bcmath pdo pdo_mysql zip
+    docker-php-ext-install intl bcmath mysqli pdo pdo_mysql zip
 
 #Install composer
 RUN ln -sf /usr/local/bin/php /usr/bin/php && \
@@ -35,5 +42,3 @@ USER www-data
 #
 
 WORKDIR /var/www/test-performance
-
-CMD "/home/www-data/entrypoint.sh"

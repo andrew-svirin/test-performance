@@ -9,4 +9,5 @@
 class_name: FunctionalTester
 modules:
     enabled:
+      - Cli
       - Yii2

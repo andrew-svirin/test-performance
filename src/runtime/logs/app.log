@@ -1,0 +1,212 @@
+2021-09-23 08:30:59 [-][-][-][error][yii\console\Exception] yii\console\Exception: The template path "@app/tests/templates/fixtures" does not exist in /var/www/test-performance/vendor/yiisoft/yii2-faker/src/FixtureController.php:414
+Stack trace:
+#0 /var/www/test-performance/vendor/yiisoft/yii2-faker/src/FixtureController.php(189): yii\faker\FixtureController->checkPaths()
+#1 /var/www/test-performance/vendor/yiisoft/yii2/base/Controller.php(179): yii\faker\FixtureController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/test-performance/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#3 /var/www/test-performance/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#4 /var/www/test-performance/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('fixture', Array)
+#5 /var/www/test-performance/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('fixture', Array)
+#6 /var/www/test-performance/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/test-performance/src/bin/yii(20): yii\base\Application->run()
+#8 {main}
+2021-09-23 08:30:59 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'd1512f7a0b67'
+    'PHP_VERSION' => '7.3.29'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'GPG_KEYS' => 'CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PWD' => '/var/www/test-performance'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=test-performance'
+    'PHP_SHA256' => '7db2834511f3d86272dca3daee3f395a5a4afce359b8342aa6edad80e12eb4d0'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'TERM' => 'xterm'
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.3.29.tar.xz'
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-embed'
+    'SHLVL' => '1'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.3.29.tar.xz.asc'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    '_' => '/usr/local/bin/php'
+    'PHP_SELF' => 'src/bin/yii'
+    'SCRIPT_NAME' => 'src/bin/yii'
+    'SCRIPT_FILENAME' => 'src/bin/yii'
+    'PATH_TRANSLATED' => 'src/bin/yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1632385859.0729
+    'REQUEST_TIME' => 1632385859
+    'argv' => [
+        0 => 'src/bin/yii'
+        1 => 'fixture'
+        2 => '*'
+    ]
+    'argc' => 3
+]
+2021-09-23 08:32:00 [-][-][-][error][yii\console\Exception] yii\console\Exception: The template path "@tests/templates/fixtures" does not exist in /var/www/test-performance/vendor/yiisoft/yii2-faker/src/FixtureController.php:414
+Stack trace:
+#0 /var/www/test-performance/vendor/yiisoft/yii2-faker/src/FixtureController.php(189): yii\faker\FixtureController->checkPaths()
+#1 /var/www/test-performance/vendor/yiisoft/yii2/base/Controller.php(179): yii\faker\FixtureController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/test-performance/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#3 /var/www/test-performance/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#4 /var/www/test-performance/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('fixture', Array)
+#5 /var/www/test-performance/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('fixture', Array)
+#6 /var/www/test-performance/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/test-performance/src/bin/yii(20): yii\base\Application->run()
+#8 {main}
+2021-09-23 08:32:00 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'd1512f7a0b67'
+    'PHP_VERSION' => '7.3.29'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'GPG_KEYS' => 'CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PWD' => '/var/www/test-performance'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=test-performance'
+    'PHP_SHA256' => '7db2834511f3d86272dca3daee3f395a5a4afce359b8342aa6edad80e12eb4d0'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'TERM' => 'xterm'
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.3.29.tar.xz'
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-embed'
+    'SHLVL' => '1'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.3.29.tar.xz.asc'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    '_' => '/usr/local/bin/php'
+    'PHP_SELF' => 'src/bin/yii'
+    'SCRIPT_NAME' => 'src/bin/yii'
+    'SCRIPT_FILENAME' => 'src/bin/yii'
+    'PATH_TRANSLATED' => 'src/bin/yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1632385920.2895
+    'REQUEST_TIME' => 1632385920
+    'argv' => [
+        0 => 'src/bin/yii'
+        1 => 'fixture'
+        2 => '*'
+    ]
+    'argc' => 3
+]
+2021-09-23 08:34:06 [-][-][-][error][yii\console\Exception] yii\console\Exception: The template path "@tests/templates/fixtures" does not exist in /var/www/test-performance/vendor/yiisoft/yii2-faker/src/FixtureController.php:414
+Stack trace:
+#0 /var/www/test-performance/vendor/yiisoft/yii2-faker/src/FixtureController.php(189): yii\faker\FixtureController->checkPaths()
+#1 /var/www/test-performance/vendor/yiisoft/yii2/base/Controller.php(179): yii\faker\FixtureController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/test-performance/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#3 /var/www/test-performance/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#4 /var/www/test-performance/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('fixture', Array)
+#5 /var/www/test-performance/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('fixture', Array)
+#6 /var/www/test-performance/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/test-performance/src/bin/yii(20): yii\base\Application->run()
+#8 {main}
+2021-09-23 08:34:06 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'd1512f7a0b67'
+    'PHP_VERSION' => '7.3.29'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'GPG_KEYS' => 'CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PWD' => '/var/www/test-performance'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=test-performance'
+    'PHP_SHA256' => '7db2834511f3d86272dca3daee3f395a5a4afce359b8342aa6edad80e12eb4d0'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'TERM' => 'xterm'
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.3.29.tar.xz'
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-embed'
+    'SHLVL' => '1'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.3.29.tar.xz.asc'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    '_' => '/usr/local/bin/php'
+    'PHP_SELF' => 'src/bin/yii'
+    'SCRIPT_NAME' => 'src/bin/yii'
+    'SCRIPT_FILENAME' => 'src/bin/yii'
+    'PATH_TRANSLATED' => 'src/bin/yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1632386046.9403
+    'REQUEST_TIME' => 1632386046
+    'argv' => [
+        0 => 'src/bin/yii'
+        1 => 'fixture'
+        2 => '*'
+    ]
+    'argc' => 3
+]
+2021-09-23 08:35:33 [-][-][-][error][yii\console\Exception] yii\console\Exception: The template path "@tests/templates/fixtures" does not exist in /var/www/test-performance/vendor/yiisoft/yii2-faker/src/FixtureController.php:414
+Stack trace:
+#0 /var/www/test-performance/vendor/yiisoft/yii2-faker/src/FixtureController.php(189): yii\faker\FixtureController->checkPaths()
+#1 /var/www/test-performance/vendor/yiisoft/yii2/base/Controller.php(179): yii\faker\FixtureController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/test-performance/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#3 /var/www/test-performance/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#4 /var/www/test-performance/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('fixture', Array)
+#5 /var/www/test-performance/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('fixture', Array)
+#6 /var/www/test-performance/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/test-performance/src/bin/yii(20): yii\base\Application->run()
+#8 {main}
+2021-09-23 08:35:33 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'd1512f7a0b67'
+    'PHP_VERSION' => '7.3.29'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'GPG_KEYS' => 'CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F7956BC5DA04B5D'
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PWD' => '/var/www/test-performance'
+    'HOME' => '/home/www-data'
+    'PHP_IDE_CONFIG' => 'serverName=test-performance'
+    'PHP_SHA256' => '7db2834511f3d86272dca3daee3f395a5a4afce359b8342aa6edad80e12eb4d0'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'TERM' => 'xterm'
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.3.29.tar.xz'
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-embed'
+    'SHLVL' => '1'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.3.29.tar.xz.asc'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    '_' => '/usr/local/bin/php'
+    'PHP_SELF' => 'src/bin/yii'
+    'SCRIPT_NAME' => 'src/bin/yii'
+    'SCRIPT_FILENAME' => 'src/bin/yii'
+    'PATH_TRANSLATED' => 'src/bin/yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1632386133.3533
+    'REQUEST_TIME' => 1632386133
+    'argv' => [
+        0 => 'src/bin/yii'
+        1 => 'fixture'
+        2 => '*'
+    ]
+    'argc' => 3
+]
