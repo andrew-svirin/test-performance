@@ -9,16 +9,18 @@
   },
   "require-dev": {
     "codeception/codeception": "^4.0",
-    "codeception/module-yii2": "^1.0.0",
     "codeception/module-asserts": "^1.0.0",
-    "yiisoft/yii2-faker": "^2.0",
-    "codeception/module-cli": "^1.1"
+    "codeception/module-cli": "^1.1",
+    "codeception/module-db": "^1.1",
+    "codeception/module-yii2": "^1.0.0",
+    "codeception/robo-paracept": "^1.2",
+    "consolidation/robo": "^3.0",
+    "yiisoft/yii2-faker": "^2.0"
   },
   "scripts": {
     "post-install-cmd": [
       "yii\\composer\\Installer::postInstall"
-    ],
-    "load-fixtures": "php yii fixture/load \"*\""
+    ]
   },
   "autoload": {
     "psr-4": {
@@ -44,6 +46,9 @@
         "config/web.php"
       ]
     }
+  },
+  "config": {
+    "sort-packages": true
   },
   "repositories": [
     {

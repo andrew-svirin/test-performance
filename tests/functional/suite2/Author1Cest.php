@@ -1,11 +1,12 @@
 <?php
 
 use Codeception\Example;
+use Codeception\Scenario;
 
 /**
  * @covers \app\commands\AuthorController
  */
-class Suite1Cest
+class Author1Cest
 {
     public function _fixtures()
     {
@@ -22,9 +23,9 @@ class Suite1Cest
     /**
      * @dataProvider authorProvider
      */
-    public function testIndex(FunctionalTester $I, Example $example)
+    public function testView(FunctionalTester $I, Scenario $scenario, Example $example)
     {
-        $I->runShellCommand(sprintf('php tests/bin/yii author/view %d', $example['id']));
+        $I->runYiiCommand(sprintf('author/view %d', $example['id']), $scenario);
     }
 
     /**
@@ -33,7 +34,7 @@ class Suite1Cest
     protected function authorProvider()
     {
         $result = [];
-        for ($i = 1; $i <= 30; $i++) {
+        for ($i = 1; $i <= 15; $i++) {
             $result[] = ['id' => $i];
         }
 

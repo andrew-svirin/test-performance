@@ -8,6 +8,24 @@
 #basic/web/index.php
 class_name: FunctionalTester
 modules:
-    enabled:
-      - Cli
-      - Yii2
+  enabled:
+    - \Helper\YiiHelper
+    - Asserts
+    - Cli
+    - Yii2
+extensions:
+  enabled:
+    - Codeception\Task\Extension\FailedTestsReporter
+groups:
+  paracept_*: tests/_data/paracept_*
+env:
+  env_1:
+    modules:
+      config:
+        Yii2:
+          configFile: 'src/config/test.php'
+  env_2:
+    modules:
+      config:
+        Yii2:
+          configFile: 'src/config/test_clone_1.php'

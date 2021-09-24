@@ -37,6 +37,23 @@ services:
       test-performance-net:
         ipv4_address: 172.100.0.6
 
+  mysql-clone-1:
+    container_name: mysql-clone-1-test-performance
+    image: mysql:5.7
+    restart: always
+    ports:
+      - "3337:3306"
+    volumes:
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d
+      - mysql-clone-1-datavolume:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=test
+    networks:
+      test-performance-net:
+        ipv4_address: 172.100.0.7
+
 networks:
   test-performance-net:
     driver: bridge
@@ -49,3 +66,4 @@ networks:
 
 volumes:
   mysql-datavolume:
+  mysql-clone-1-datavolume:
