@@ -1,7 +1,5 @@
 <?php
-
 $params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic-console',
@@ -9,7 +7,7 @@ $config = [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
     'aliases' => [
-        '@tests' =>  '@app/../tests',
+        '@tests' => '@app/../tests',
     ],
     'components' => [
         'log' => [
@@ -20,7 +18,13 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
+        'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=mysql;port=3306;dbname=test_performance',
+            'username' => 'test',
+            'password' => 'test',
+            'charset' => 'utf8',
+        ],
     ],
     'params' => $params,
     'controllerMap' => [

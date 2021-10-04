@@ -1,27 +1,26 @@
 <?php
 $params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/test_db_clone_1.php';
 
 /**
  * Application configuration shared by all test types
  */
-return [
+$config = [
     'id' => 'basic-tests',
     'basePath' => dirname(__DIR__),
-    'aliases' => [],
-    'language' => 'en-US',
+    'controllerNamespace' => 'app\commands',
+    'aliases' => [
+        '@tests' => '@app/../tests',
+    ],
     'components' => [
-        'db' => $db,
-        'request' => [
-            'cookieValidationKey' => 'test',
-            'enableCsrfValidation' => false,
-            // but if you absolutely need it set cookie domain to localhost
-            /*
-            'csrfCookie' => [
-                'domain' => 'localhost',
-            ],
-            */
+        'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=mysql-clone-1;port=3306;dbname=test_performance_test',
+            'username' => 'test',
+            'password' => 'test',
+            'charset' => 'utf8',
         ],
     ],
     'params' => $params,
 ];
+
+return $config;

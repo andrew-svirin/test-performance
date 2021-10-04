@@ -32,3 +32,6 @@ project-run-suite-1:
 project-run-suite-2:
 	docker-compose exec php-cli ./vendor/bin/robo parallel:run
 	docker-compose exec php-cli ./vendor/bin/robo parallel:merge
+
+project-run-suite-3:
+	echo "Ok"

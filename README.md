@@ -7,11 +7,11 @@ Optimize performance for tests by optimizing database node.
 # Installation
 
 1. Run `make docker-build`
-2. Login into php-container `make php`
-3. Install the project `make project-install`
-4. Run suites:
+2. Install the project `make project-install`
+3. Run suites:
     1. Run Suite 1: `make project-run-suite-1`
     2. Run Suite 2: `make project-run-suite-2`
+    3. Run Suite 3: `make project-run-suite-3`
 
 # Experiment
 
