@@ -2,6 +2,8 @@
 
 namespace app\components\php_mysql_engine;
 
+use Yii;
+
 class FakePDO extends \Vimeo\MysqlEngine\Php7\FakePdo
 {
     /**
@@ -11,7 +13,7 @@ class FakePDO extends \Vimeo\MysqlEngine\Php7\FakePdo
     {
         parent::__construct($dsn, $username, $passwd, $options ?? []);
 
-        $dbPath = \Yii::getAlias('@app/migrations/faked_db/db.sql');
-        $this->prepare(file_get_contents($dbPath))->execute();
+        $this->prepare(file_get_contents(Yii::getAlias('@app/migrations/faked_db/db.sql')))->execute();
+        $this->prepare(file_get_contents(Yii::getAlias('@app/migrations/faked_db/insert.sql')))->execute();
     }
 }

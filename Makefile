@@ -27,11 +27,17 @@ project-fixtures-load:
 	docker-compose exec php-cli php ./src/bin/yii fixture/load "*" --interactive=0
 
 project-run-suite-1:
-	docker-compose exec php-cli ./vendor/bin/codecept run tests/functional/suite1/AuthorCest.php
+	docker-compose exec php-cli ./vendor/bin/codecept run tests/functional/suite1/Suite1AuthorCest.php
 
 project-run-suite-2:
-	docker-compose exec php-cli ./vendor/bin/robo parallel:run
-	docker-compose exec php-cli ./vendor/bin/robo parallel:merge
+	docker-compose exec php-cli ./vendor/bin/robo parallel:split-suite2
+	docker-compose exec php-cli ./vendor/bin/robo parallel:run-suite2
+	docker-compose exec php-cli ./vendor/bin/robo parallel:merge-results-suite2
 
 project-run-suite-3:
-	echo "Ok"
+	docker-compose exec php-cli ./vendor/bin/codecept run tests/functional/suite3/Suite3AuthorCest.php
+
+project-run-suite-4:
+	docker-compose exec php-cli ./vendor/bin/robo parallel:split-suite4
+	docker-compose exec php-cli ./vendor/bin/robo parallel:run-suite4
+	docker-compose exec php-cli ./vendor/bin/robo parallel:merge-results-suite4

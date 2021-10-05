@@ -35,10 +35,17 @@ Use 2 containers for databases for parallel tests:
 
 ### Suite3 (tests/functional/commands/Suite3Cest):
 
-Use 1 virtual database:
+Use virtual database:
 
-- upload pseudo-fixtures into 1 database
+- upload pseudo-fixtures into 1 virtual database
 - call all tests one by one
+
+### Suite4 (tests/functional/commands/Suite4Cest):
+
+Use virtual database for parallel tests:
+
+- upload pseudo-fixtures into 4 virtual databases
+- call all tests one by one in 4 parallel processes
 
 # Results
 
@@ -46,4 +53,5 @@ Use 1 virtual database:
 | --------- | --------- |
 | Suite 1 | 15 s |
 | Suite 2 | 11 s |
-| Suite 3 | 00 s |
+| Suite 3 | 14 s |
+| Suite 4 | 5 s |

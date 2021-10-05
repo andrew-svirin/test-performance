@@ -6,7 +6,7 @@ use Codeception\Scenario;
 /**
  * @covers \app\commands\AuthorController
  */
-class Author1Cest
+class Suite4Author2Cest
 {
     public function _fixtures()
     {
@@ -25,7 +25,7 @@ class Author1Cest
      */
     public function testView(FunctionalTester $I, Scenario $scenario, Example $example)
     {
-        $I->runYiiCommand(sprintf('author/view %d', $example['id']), $scenario);
+        $I->runShellCommand(sprintf('php tests/bin/yii_virtual author/view %d', $example['id']));
     }
 
     /**
@@ -34,7 +34,7 @@ class Author1Cest
     protected function authorProvider()
     {
         $result = [];
-        for ($i = 1; $i <= 15; $i++) {
+        for ($i = 9; $i <= 16; $i++) {
             $result[] = ['id' => $i];
         }
 

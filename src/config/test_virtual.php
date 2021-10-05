@@ -19,6 +19,8 @@ $config = [
             'username' => 'test',
             'password' => 'test',
             'charset' => 'utf8',
+            'enableLogging' => false,
+            'enableProfiling' => false,
         ],
     ],
     'params' => $params,
