@@ -3,6 +3,8 @@
 # Goal
 
 Optimize performance for tests by optimizing database node.
+- Using cloning of containers
+- Using virtual database
 
 # Installation
 
