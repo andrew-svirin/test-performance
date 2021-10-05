@@ -12,6 +12,7 @@ Optimize performance for tests by optimizing database node.
     1. Run Suite 1: `make project-run-suite-1`
     2. Run Suite 2: `make project-run-suite-2`
     3. Run Suite 3: `make project-run-suite-3`
+    4. Run Suite 4: `make project-run-suite-4`
 
 # Experiment
 
