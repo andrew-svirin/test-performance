@@ -14,8 +14,7 @@ $config = [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=fake;port=3306;dbname=test_performance_test',
-            'pdoClass' => '\app\components\php_mysql_engine\FakePDO',
+            'dsn' => 'mysql:host=mysql;port=3306;dbname=test_performance_test_clone_2',
             'username' => 'test',
             'password' => 'test',
             'charset' => 'utf8',

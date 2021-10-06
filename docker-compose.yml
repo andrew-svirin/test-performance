@@ -44,7 +44,7 @@ services:
     ports:
       - "3337:3306"
     volumes:
-      - ./docker/mysql/init:/docker-entrypoint-initdb.d
+      - ./docker/mysql-clone-1/init:/docker-entrypoint-initdb.d
       - mysql-clone-1-datavolume:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root

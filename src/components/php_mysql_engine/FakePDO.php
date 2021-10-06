@@ -14,6 +14,6 @@ class FakePDO extends \Vimeo\MysqlEngine\Php7\FakePdo
         parent::__construct($dsn, $username, $passwd, $options ?? []);
 
         $this->prepare(file_get_contents(Yii::getAlias('@app/migrations/faked_db/db.sql')))->execute();
-        $this->prepare(file_get_contents(Yii::getAlias('@app/migrations/faked_db/insert.sql')))->execute();
+//        $this->prepare(file_get_contents(Yii::getAlias('@app/migrations/faked_db/insert.sql')))->execute();
     }
 }

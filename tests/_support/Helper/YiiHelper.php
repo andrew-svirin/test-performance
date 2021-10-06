@@ -13,10 +13,21 @@ class YiiHelper extends \Codeception\Module
         if (null === $scenario) {
             $yiiCmd = 'tests/bin/yii';
         } else {
-            if ('env_1' === $scenario->current('env')) {
+            $env = $scenario->current('env');
+            if ('env_21' === $env) {
                 $yiiCmd = 'tests/bin/yii';
-            } elseif ('env_2' === $scenario->current('env')) {
+            } elseif ('env_22' === $env) {
                 $yiiCmd = 'tests/bin/yii_clone_1';
+            } elseif ('env_31' === $env) {
+                $yiiCmd = 'tests/bin/yii';
+            } elseif ('env_32' === $env) {
+                $yiiCmd = 'tests/bin/yii_clone_2';
+            } elseif ('env_virtual' === $env) {
+                list($route, $params) = explode(' ', $cmd, 2);
+
+                $result = \Yii::$app->runAction($route, !empty($params) ? explode(' ', $params) : []);
+                $this->assertEquals(0, $result);
+                return;
             } else {
                 $yiiCmd = 'tests/bin/yii';
             }

@@ -22,6 +22,8 @@ project-install:
 	docker-compose exec php-cli php ./src/bin/yii migrate --interactive=0
 	docker-compose exec php-cli php ./tests/bin/yii migrate --interactive=0
 	docker-compose exec php-cli php ./tests/bin/yii_clone_1 migrate --interactive=0
+	docker-compose exec php-cli php ./tests/bin/yii_clone_2 migrate --interactive=0
+	docker-compose exec php-cli php ./vendor/bin/codecept build
 
 project-fixtures-load:
 	docker-compose exec php-cli php ./src/bin/yii fixture/load "*" --interactive=0
@@ -35,9 +37,14 @@ project-run-suite-2:
 	docker-compose exec php-cli ./vendor/bin/robo parallel:merge-results-suite2
 
 project-run-suite-3:
-	docker-compose exec php-cli ./vendor/bin/codecept run tests/functional/suite3/Suite3AuthorCest.php
+	docker-compose exec php-cli ./vendor/bin/robo parallel:split-suite3
+	docker-compose exec php-cli ./vendor/bin/robo parallel:run-suite3
+	docker-compose exec php-cli ./vendor/bin/robo parallel:merge-results-suite3
 
 project-run-suite-4:
-	docker-compose exec php-cli ./vendor/bin/robo parallel:split-suite4
-	docker-compose exec php-cli ./vendor/bin/robo parallel:run-suite4
-	docker-compose exec php-cli ./vendor/bin/robo parallel:merge-results-suite4
+	docker-compose exec php-cli ./vendor/bin/codecept run tests/functional/suite4/Suite4AuthorCest.php --env env_virtual
+
+project-run-suite-5:
+	docker-compose exec php-cli ./vendor/bin/robo parallel:split-suite5
+	docker-compose exec php-cli ./vendor/bin/robo parallel:run-suite5 --verbose
+	docker-compose exec php-cli ./vendor/bin/robo parallel:merge-results-suite5

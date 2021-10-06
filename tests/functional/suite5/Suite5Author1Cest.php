@@ -5,7 +5,7 @@ use Codeception\Example;
 /**
  * @covers \app\commands\AuthorController
  */
-class Suite3AuthorCest
+class Suite5Author1Cest
 {
     public function _fixtures()
     {
@@ -33,7 +33,7 @@ class Suite3AuthorCest
     protected function authorProvider()
     {
         $result = [];
-        for ($i = 1; $i <= 30; $i++) {
+        for ($i = 1; $i <= 8; $i++) {
             $result[] = ['id' => $i];
         }
 

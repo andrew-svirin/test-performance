@@ -1068,6 +1068,87 @@
             "time": "2020-07-03T15:54:43+00:00"
         },
         {
+            "name": "composer/semver",
+            "version": "3.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/semver.git",
+                "reference": "31f3ea725711245195f62e54ffa402d8ef2fdba9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/semver/zipball/31f3ea725711245195f62e54ffa402d8ef2fdba9",
+                "reference": "31f3ea725711245195f62e54ffa402d8ef2fdba9",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.2 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.54",
+                "symfony/phpunit-bridge": "^4.2 || ^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Semver\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                },
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com",
+                    "homepage": "http://robbast.nl"
+                }
+            ],
+            "description": "Semver library that offers utilities, version constraint parsing and validation.",
+            "keywords": [
+                "semantic",
+                "semver",
+                "validation",
+                "versioning"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/composer",
+                "issues": "https://github.com/composer/semver/issues",
+                "source": "https://github.com/composer/semver/tree/3.2.5"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-05-24T12:41:47+00:00"
+        },
+        {
             "name": "consolidation/annotated-command",
             "version": "4.4.0",
             "source": {
@@ -1295,24 +1376,24 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "3.0.5",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/Robo.git",
-                "reference": "a9ce34c3d0fb3e8619fc4a6f72c51678caf1b99b"
+                "reference": "36dce2965a67abe5cf91f2bc36d2582a64a11258"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/Robo/zipball/a9ce34c3d0fb3e8619fc4a6f72c51678caf1b99b",
-                "reference": "a9ce34c3d0fb3e8619fc4a6f72c51678caf1b99b",
+                "url": "https://api.github.com/repos/consolidation/Robo/zipball/36dce2965a67abe5cf91f2bc36d2582a64a11258",
+                "reference": "36dce2965a67abe5cf91f2bc36d2582a64a11258",
                 "shasum": ""
             },
             "require": {
-                "consolidation/annotated-command": "^4.2.4",
+                "consolidation/annotated-command": "^4.3",
                 "consolidation/config": "^1.2.1|^2.0.1",
                 "consolidation/log": "^1.1.1|^2.0.2",
                 "consolidation/output-formatters": "^4.1.2",
-                "consolidation/self-update": "^1.2",
+                "consolidation/self-update": "^2.0",
                 "league/container": "^3.3.1",
                 "php": ">=7.1.3",
                 "symfony/console": "^4.4.19 || ^5",
@@ -1330,7 +1411,7 @@
                 "patchwork/jsqueeze": "^2",
                 "pear/archive_tar": "^1.4.4",
                 "phpunit/phpunit": "^7.5.20 | ^8",
-                "squizlabs/php_codesniffer": "^3",
+                "squizlabs/php_codesniffer": "^3.6",
                 "yoast/phpunit-polyfills": "^0.2.0"
             },
             "suggest": {
@@ -1388,25 +1469,26 @@
             "description": "Modern task runner",
             "support": {
                 "issues": "https://github.com/consolidation/Robo/issues",
-                "source": "https://github.com/consolidation/Robo/tree/3.0.5"
+                "source": "https://github.com/consolidation/Robo/tree/3.0.6"
             },
-            "time": "2021-08-29T21:11:31+00:00"
+            "time": "2021-10-05T23:56:45+00:00"
         },
         {
             "name": "consolidation/self-update",
-            "version": "1.2.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/self-update.git",
-                "reference": "dba6b2c0708f20fa3ba8008a2353b637578849b4"
+                "reference": "7d6877f8006c51069e1469a9c57b1435640f74b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/self-update/zipball/dba6b2c0708f20fa3ba8008a2353b637578849b4",
-                "reference": "dba6b2c0708f20fa3ba8008a2353b637578849b4",
+                "url": "https://api.github.com/repos/consolidation/self-update/zipball/7d6877f8006c51069e1469a9c57b1435640f74b7",
+                "reference": "7d6877f8006c51069e1469a9c57b1435640f74b7",
                 "shasum": ""
             },
             "require": {
+                "composer/semver": "^3.2",
                 "php": ">=5.5.0",
                 "symfony/console": "^2.8|^3|^4|^5",
                 "symfony/filesystem": "^2.5|^3|^4|^5"
@@ -1417,7 +1499,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-main": "2.x-dev"
                 }
             },
             "autoload": {
@@ -1442,9 +1524,9 @@
             "description": "Provides a self:update command for Symfony Console applications.",
             "support": {
                 "issues": "https://github.com/consolidation/self-update/issues",
-                "source": "https://github.com/consolidation/self-update/tree/1.2.0"
+                "source": "https://github.com/consolidation/self-update/tree/2.0.0"
             },
-            "time": "2020-04-13T02:49:20+00:00"
+            "time": "2021-10-05T23:29:47+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -5551,12 +5633,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/andrew-svirin/php-mysql-engine.git",
-                "reference": "93685c5faabe8927fd7f1b72c06f3a367726206d"
+                "reference": "354470829255215395529ac94ab448ce8e2f614b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andrew-svirin/php-mysql-engine/zipball/93685c5faabe8927fd7f1b72c06f3a367726206d",
-                "reference": "93685c5faabe8927fd7f1b72c06f3a367726206d",
+                "url": "https://api.github.com/repos/andrew-svirin/php-mysql-engine/zipball/354470829255215395529ac94ab448ce8e2f614b",
+                "reference": "354470829255215395529ac94ab448ce8e2f614b",
                 "shasum": ""
             },
             "require": {
@@ -5594,7 +5676,7 @@
             "support": {
                 "source": "https://github.com/andrew-svirin/php-mysql-engine/tree/master"
             },
-            "time": "2021-09-13T17:52:54+00:00"
+            "time": "2021-10-05T13:28:07+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -5748,5 +5830,5 @@
         "php": ">=7.1.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

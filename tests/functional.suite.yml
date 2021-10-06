@@ -17,15 +17,32 @@ extensions:
   enabled:
     - Codeception\Task\Extension\FailedTestsReporter
 groups:
-  paracept_*: tests/_data/paracept_*
+  paracept_2*: tests/_data/paracept_2*
+  paracept_3*: tests/_data/paracept_3*
+  paracept_5*: tests/_data/paracept_5*
 env:
-  env_1:
+  env_21:
     modules:
       config:
         Yii2:
           configFile: 'src/config/test.php'
-  env_2:
+  env_22:
     modules:
       config:
         Yii2:
           configFile: 'src/config/test_clone_1.php'
+  env_31:
+    modules:
+      config:
+        Yii2:
+          configFile: 'src/config/test.php'
+  env_32:
+    modules:
+      config:
+        Yii2:
+          configFile: 'src/config/test_clone_2.php'
+  env_virtual:
+    modules:
+      config:
+        Yii2:
+          configFile: 'src/config/test_virtual.php'
