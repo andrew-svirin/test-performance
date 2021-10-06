@@ -20,8 +20,9 @@ Optimize performance for tests by optimizing database node.
 # Experiment
 
 1. Using 2 related tables (authors, books)
-2. Making console command call that show information by author id in raw representation.
-3. Making 30 command invocations for measure.
+2. Prepare tables for tests.
+3. Making console command call that show information by author id in raw representation.
+4. Making 30 controller command invocations for measure.
 
 ### Suite1 (tests/functional/suite1):
 
