@@ -1,10 +1,10 @@
 # Test performance
 
-Usage of virtual DB allows to minimize time for testing and do not sacrify of tests quality.  
-Time that needing to run same tests on normal db and vertual db can be differ in 15x times.  
-Tests those took 15 minutes can be executed by 1 minute. You can calculate yourself how much
-time can be economed, when on project with 10 developers need to run 30 minutes tests on one 
-DI machine one by one when each developer run tests 5 times per workday.
+Usage of virtual DB allows to minimize time for testing and do not sacrifice of tests quality.
+Time that needing to run same tests on normal db and virtual db can be differ in 15x times.
+Tests those took 15 minutes can be executed by 1 minute. You can calculate yourself how much  
+time can be economized, when on project with 10 developers need to run 30 minutes tests on  
+one DI machine one by one when each developer run tests 5 times per workday.
 
 # Goal
 
